@@ -152,10 +152,10 @@ const InlineSvgComponent = {
         setTitle(svg) {
             const titleTags = svg.getElementsByTagName('title');
             if (titleTags.length) { // overwrite existing title
-                titleTags[0].innerHTML = this.title;
+                titleTags[0].textContent = this.title;
             } else { // create a title element if one doesn't already exist
                 const titleEl = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-                titleEl.innerHTML = this.title;
+                titleEl.textContent = this.title;
                 svg.appendChild(titleEl);
             }
         },
